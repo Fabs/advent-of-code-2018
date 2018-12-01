@@ -4,6 +4,7 @@ module Fabs.IntSetWithLast
   , insert
   , empty
   , safeLast
+  , lastIsMember
   ) where
 
 import qualified Data.IntSet as S (IntSet, empty, insert, member, size)
@@ -15,13 +16,18 @@ data Set = Set
   }
 
 member :: Set -> Int -> Bool
-member s r = S.member r (set s)
+member (Set s (Just l)) s' = l == s' || S.member s' s
+member (Set s Nothing) s' = S.member s' s
 
 insert :: Set -> Int -> Set
-insert (Set set _) s = Set (S.insert s set) (Just s)
+insert (Set set Nothing) s = Set set (Just s)
+insert (Set set (Just s')) s = Set (S.insert s' set) (Just s)
 
 empty :: Set
 empty = Set S.empty Nothing
 
 safeLast :: Int -> Set -> Int
 safeLast n = fromMaybe n . lastIns
+
+lastIsMember (Set _ Nothing) = False
+lastIsMember (Set s (Just s')) = S.member s' s
