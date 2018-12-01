@@ -1,4 +1,4 @@
-module LazyStdin
+module Fabs.LazyStdin
   ( runOnInput
   ) where
 

@@ -5,28 +5,13 @@ module Day01
   , star2
   ) where
 
-import qualified Data.IntSet as S (IntSet, empty, insert, member, size)
-import Data.Maybe
-import LazyStdin (runOnInput)
+import Fabs.IntSetWithLast as Set
+import Fabs.LazyStdin (runOnInput)
 
 star1 :: IO ()
 star1 = print =<< runOnInput sum
   where
     sum = foldr addIntString 0
-
-data Set = Set
-  { set :: S.IntSet
-  , lastIns :: Maybe Int
-  }
-
-member :: Set -> Int -> Bool
-member s r = S.member r (set s)
-
-insert :: Set -> Int -> Set
-insert (Set set _) s = Set (S.insert s set) (Just s)
-
-empty :: Set
-empty = Set S.empty Nothing
 
 star2 :: IO ()
 star2 = print =<< runOnInput find
@@ -38,8 +23,7 @@ star2 = print =<< runOnInput find
       | member s freq = freq
       | otherwise = searchRepeated nextSearch ns
       where
-        safeLast = fromMaybe 0 . lastIns
-        freq = addIntString n (safeLast s)
+        freq = addIntString n (safeLast 0 s)
         nextSearch = insert s freq
 
 addIntString :: String -> Int -> Int
