@@ -1,0 +1,6 @@
+module Day03 where
+
+import Fabs.LazyStdin (runOnInput)
+
+star1 :: IO ()
+star1 = print =<< runOnInput id
