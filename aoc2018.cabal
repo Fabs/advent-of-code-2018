@@ -1,21 +1,23 @@
-name:                aoc2018
-version:             0.1.0.0
--- synopsis:
--- description:
-homepage:            https://github.com/fabs/aoc2018#readme
-license:             BSD3
-license-file:        LICENSE
-author:              Fabs
-maintainer:          fabriciosn@gmail.com
-copyright:           MIT
-category:            tools
-build-type:          Simple
-cabal-version:       >=1.10
-extra-source-files:  README.md
+cabal-version: >=1.10
+name: aoc2018
+version: 0.1.0.0
+license: BSD3
+license-file: LICENSE
+copyright: MIT
+maintainer: fabriciosn@gmail.com
+author: Fabs
+homepage: https://github.com/fabs/aoc2018#readme
+category: tools
+build-type: Simple
+extra-source-files:
+    README.md
 
 executable aoc2018
-  hs-source-dirs:      src
-  main-is:             Main.hs
-  default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5,
-                       containers
+    main-is: Main.hs
+    hs-source-dirs: src
+    default-language: Haskell2010
+    build-depends:
+        base >=4.7 && <5,
+        containers -any,
+        regex-posix -any,
+        hashmap -any
