@@ -21,3 +21,8 @@ day04: all
 	cat inputs/day4.sample.in | aoc2018 4 1
 	cat inputs/day4.in | aoc2018 4 1
 	cat inputs/day4.in | aoc2018 4 2
+
+day05: all
+	cat inputs/day5.sample.in | aoc2018 5 1
+	cat inputs/day5.in | aoc2018 5 1
+	cat inputs/day5.in | aoc2018 5 2
