@@ -20,4 +20,5 @@ executable aoc2018
         base >=4.7 && <5,
         containers -any,
         regex-posix -any,
-        hashmap -any
+        hashmap -any,
+        matrix -any
