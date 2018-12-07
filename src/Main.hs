@@ -6,6 +6,7 @@ import qualified Day03
 import qualified Day04
 import qualified Day05
 import qualified Day06
+import qualified Day07
 import System.Environment (getArgs)
 
 runFunc :: [String] -> IO ()
@@ -21,6 +22,8 @@ runFunc ["5", "1"] = Day05.star1
 runFunc ["5", "2"] = Day05.star2
 runFunc ["6", "1"] = Day06.star1
 runFunc ["6", "2"] = Day06.star2
+runFunc ["7", "1"] = Day07.star1
+runFunc ["7", "2"] = Day07.star2
 
 main :: IO ()
 main = runFunc =<< getArgs
