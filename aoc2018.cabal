@@ -21,4 +21,5 @@ executable aoc2018
         containers -any,
         regex-posix -any,
         hashmap -any,
-        matrix -any
+        matrix -any,
+        split -any

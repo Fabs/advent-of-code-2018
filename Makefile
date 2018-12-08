@@ -37,3 +37,9 @@ day07: all
 	cat inputs/day7.in | aoc2018 7 1
 	cat inputs/day7.in | aoc2018 7 2
 	cat inputs/day7.sample.in | aoc2018 7 2
+
+day08: all
+	cat inputs/day8.sample.in | aoc2018 8 1
+	cat inputs/day8.in | aoc2018 8 1
+	cat inputs/day8.sample.in | aoc2018 8 2
+	cat inputs/day8.in | aoc2018 8 2
