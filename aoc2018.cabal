@@ -22,4 +22,6 @@ executable aoc2018
         regex-posix -any,
         hashmap -any,
         matrix -any,
-        split -any
+        split -any,
+        vector -any,
+        pointedlist -any
