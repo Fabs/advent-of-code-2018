@@ -54,3 +54,6 @@ day09: all
 	aoc2018 9 1 428 70825 -1
 	aoc2018 9 1 428 7082500 -1
 
+day10: all
+	cat inputs/day10.sample.in | aoc2018 10 2
+	cat inputs/day10.in | aoc2018 10 2
