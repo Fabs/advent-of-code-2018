@@ -10,6 +10,7 @@ import qualified Day07
 import qualified Day08
 import qualified Day09
 import qualified Day10
+import qualified Day11
 import System.Environment (getArgs)
 
 runFunc :: [String] -> IO ()
@@ -33,6 +34,8 @@ runFunc ["9", _, pls, pts, expt] =
   Day09.star1 (toInt pls) (toInt pts) (toInt expt)
 runFunc ["10", "1", t] = Day10.star1 (toInt t)
 runFunc ["10", "2"] = Day10.star2
+runFunc ["11", serial] = Day11.star1 (toInt serial)
+runFunc ["11", serial, x, y] = Day11.starQ (toInt serial) (toInt x) (toInt y)
 
 toInt = read :: String -> Int
 
