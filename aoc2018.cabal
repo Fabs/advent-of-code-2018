@@ -25,4 +25,5 @@ executable aoc2018
         matrix -any,
         split -any,
         vector -any,
-        pointedlist -any
+        pointedlist -any,
+        bytestring -any
