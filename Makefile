@@ -61,3 +61,26 @@ day10: all
 day11: all
 	aoc2018 11 7315
 	aoc2018 11 18
+
+
+day12: all
+	cat inputs/day12.sample.in | aoc2018 12 1
+
+
+day13: all
+	cat inputs/day13.sample.in | aoc2018 13 1
+
+day14: all
+	aoc2018 14 1 9 5158916779
+	aoc2018 14 1 5 0124515891
+	aoc2018 14 1 18 9251071085
+	aoc2018 14 1 2018 5941429882
+	# aoc2018 14 1 702831 0
+
+day15: all
+	cat inputs/day.15.1 | aoc2018 15 1 27730
+	cat inputs/day.15.2 | aoc2018 15 1 36334
+	cat inputs/day.15.3 | aoc2018 15 1 39514
+	cat inputs/day.15.4 | aoc2018 15 1 27755
+	cat inputs/day.15.5 | aoc2018 15 1 27755
+	cat inputs/day.15   | aoc2018 15 1 1889910
