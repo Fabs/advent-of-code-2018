@@ -13,7 +13,6 @@ import qualified Day10
 import qualified Day11
 import qualified Day12
 import qualified Day13
-import qualified Day14
 import qualified Day15
 import System.Environment (getArgs)
 
@@ -42,7 +41,6 @@ runFunc ["11", serial] = Day11.star1 (toInt serial)
 runFunc ["11", serial, x, y] = Day11.starQ (toInt serial) (toInt x) (toInt y)
 runFunc ["12", "1"] = Day12.star1
 runFunc ["12", "1"] = Day12.star1
-runFunc ["14", "1", input, expect] = Day14.star1 (toInt input) (toInt expect)
 runFunc ["15", "1", expect] = Day15.star1 (toInt expect)
 
 toInt = read :: String -> Int

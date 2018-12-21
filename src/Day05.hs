@@ -10,10 +10,13 @@ star2 :: IO ()
 star2 = print =<< runOnInput (minimize . head)
   where
     minimize s = foldr (reactSize s) (Nothing, Nothing) ['a' .. 'z']
-    reactSize s c m@(Nothing, Nothing) = (Just c, Just $ reaction c s)
-    reactSize s c m@(_, Just min)
-      | reaction c s > min = (Just c, Just $ reaction c s)
+    reactSize ::
+         String -> Char -> (Maybe Char, Maybe Int) -> (Maybe Char, Maybe Int)
+    reactSize s c (Nothing, Nothing) = (Just c, Just $ reaction c s)
+    reactSize s c m@(_, Just min')
+      | reaction c s > min' = (Just c, Just $ reaction c s)
       | otherwise = m
+    reactSize _ _ _ = error "should never be the case"
     reaction c s = react $ filtered c s
     filtered c = filter (/= c) . filter (/= toUpper c)
 

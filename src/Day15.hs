@@ -66,7 +66,8 @@ hit (Unit _ atk _) (Unit r' a' l')
 star1 :: Int -> IO ()
 star1 e = print . (format e) . head . reverse =<< runOnInput runGame
   where
-    format e (Game u b s t o) = show (s, t, s * t, e - s * t)
+    format e (Game u b s t o) =
+      M.prettyMatrix leMatrix ++ show (s, t, s * t, e - s * t)
       where
         rows = M.nrows b
         cols = M.ncols b

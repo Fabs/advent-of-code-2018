@@ -80,8 +80,8 @@ day14: all
 
 day15: all
 	cat inputs/day.15.1 | aoc2018 15 1 27730
-	cat inputs/day.15.2 | aoc2018 15 1 36334
-	cat inputs/day.15.3 | aoc2018 15 1 39514
-	cat inputs/day.15.4 | aoc2018 15 1 27755
-	cat inputs/day.15.5 | aoc2018 15 1 27755
-	cat inputs/day.15   | aoc2018 15 1 1889910
+#	cat inputs/day.15.2 | aoc2018 15 1 36334
+#	cat inputs/day.15.3 | aoc2018 15 1 39514
+#	cat inputs/day.15.4 | aoc2018 15 1 27755
+#	cat inputs/day.15.5 | aoc2018 15 1 27755
+#	cat inputs/day.15   | aoc2018 15 1 1889910
